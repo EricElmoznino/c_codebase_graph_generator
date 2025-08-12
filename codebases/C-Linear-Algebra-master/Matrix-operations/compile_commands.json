@@ -1,0 +1,35 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-std=c99",
+      "-Wall",
+      "Sparse.c"
+    ],
+    "directory": "/Users/ericelmoznino/Documents/Open-Ended Learning/c_codebase_graph_generator/codebases/C-Linear-Algebra-master/Matrix-operations",
+    "file": "/Users/ericelmoznino/Documents/Open-Ended Learning/c_codebase_graph_generator/codebases/C-Linear-Algebra-master/Matrix-operations/Sparse.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-std=c99",
+      "-Wall",
+      "List.c"
+    ],
+    "directory": "/Users/ericelmoznino/Documents/Open-Ended Learning/c_codebase_graph_generator/codebases/C-Linear-Algebra-master/Matrix-operations",
+    "file": "/Users/ericelmoznino/Documents/Open-Ended Learning/c_codebase_graph_generator/codebases/C-Linear-Algebra-master/Matrix-operations/List.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-std=c99",
+      "-Wall",
+      "Matrix.c"
+    ],
+    "directory": "/Users/ericelmoznino/Documents/Open-Ended Learning/c_codebase_graph_generator/codebases/C-Linear-Algebra-master/Matrix-operations",
+    "file": "/Users/ericelmoznino/Documents/Open-Ended Learning/c_codebase_graph_generator/codebases/C-Linear-Algebra-master/Matrix-operations/Matrix.c"
+  }
+]

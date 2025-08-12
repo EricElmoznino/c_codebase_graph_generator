@@ -1398,7 +1398,10 @@ def parse_args():
     )
     ap.add_argument("project_root", help="Path to project root.")
     ap.add_argument(
-        "-o", "--output", default="cgraph.graphml", help="GraphML output path."
+        "-o",
+        "--output",
+        default="out/cgraph.graphml",
+        help="GraphML output path.",
     )
     ap.add_argument(
         "--include",
@@ -1539,7 +1542,7 @@ def main():
                 omit_code=args.json_no_code,
                 code_limit=args.json_code_limit,
             )
-        print(f"Wrote {args.json}")
+        print(f"Wrote {args.output.split(".")[0] + ".json"}")
     if args.png:
         save_png(
             builder.G,
@@ -1548,7 +1551,7 @@ def main():
             layout=args.layout,
             dpi=args.dpi,
         )
-        print(f"Wrote {args.png}")
+        print(f"Wrote {args.output.split(".")[0] + ".png"}")
     if args.html:
         if args.html_engine == "vis":
             export_html_visjs(
@@ -1557,7 +1560,7 @@ def main():
                 label_mode=args.label,
                 physics=True,
             )
-            print(f"Wrote {args.html}")
+            print(f"Wrote {args.output.split(".")[0] + ".html"}")
         elif args.html_engine == "pyvis":
             export_html_pyvis(
                 builder.G,
@@ -1565,7 +1568,7 @@ def main():
                 label_mode=args.label,
                 physics=True,
             )
-            print(f"Wrote {args.html}")
+            print(f"Wrote {args.output.split(".")[0] + ".html"}")
         else:  # auto
             try:
                 export_html_pyvis(
@@ -1574,7 +1577,7 @@ def main():
                     label_mode=args.label,
                     physics=True,
                 )
-                print(f"Wrote {args.html}")
+                print(f"Wrote {args.output.split(".")[0] + ".html"}")
             except Exception as e:
                 print(f"[warn] PyVis failed ({e}). Falling back to vis.js…")
                 export_html_visjs(
@@ -1583,7 +1586,7 @@ def main():
                     label_mode=args.label,
                     physics=True,
                 )
-                print(f"Wrote {args.html}")
+                print(f"Wrote {args.output.split(".")[0] + ".html"}")
 
 
 if __name__ == "__main__":
